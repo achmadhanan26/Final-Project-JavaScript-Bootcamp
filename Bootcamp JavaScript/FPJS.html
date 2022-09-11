@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        @media screen and (min-width: 1024px) {
+            .form-section {
+                display: none;
+            }
+            .pricing-header {
+                max-width: 700px;
+            }
+            .card-deck .card{
+                width: 33.3%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-clumn flex-md-row algin-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+
+        <h5 class="my-0 mr-md-auto font-weight-normal">Toko Sepatu</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="#" onclick="switchPage('home')">Beranda </a>
+            <a class="p-2 text-dark" href="#" onclick="switchPage('admin')">Admin </a>
+        </nav>
+    </div>
+
+    <div class="container" id="container-home">
+        <div class=row>
+            <h4>Filter Product :</h4>
+            <input type="text" id="search-product" class="form-control" style="width: 300px; margin-right: 10px;" placeholder="Cari Product" />
+            <select name="" id="order-product" class="form-control" style="width:300px; margin-right: 10px;">
+                <option value="name-a_z">Name A-Z</option>
+                <option value="name-z_a"> Name Z-A</option>
+                <option value="price-min_max"> Price Min-Max</option>
+                <option value="price-max_min"> Price Max-Min</option>
+            </select>
+
+            <button class="btn btn-info" style="width: 150px" onclick="filterProducts();">Filter</button>
+        </div>
+        <div class="row" style="margin-top: 20px;" id="data-products">
+
+        </div>
+    </div>
+
+    <div class="container" id="container-admin">
+        <h3>Halaman Admin Here..</h3>
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <center><h3> Toko Online</h3></center>
+    </footer>
+
+    <script src="./FPJS.js"></script>
+</body>
+</html>
